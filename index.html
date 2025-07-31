@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Surat Cinta Untuk 4mm0d7</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="envelope" onclick="openLetter()">
+    💌 Klik untuk membuka surat
+  </div>
+
+  <div class="message" id="letterMessage">
+    <div class="love">❤️</div>
+    <div class="typewriter">
+      Aku nggak tahu harus bilang apa... selain: aku cinta kamu. :)
+    </div>
+
+    <div class="controls">
+      <button onclick="toggleMusic()">Putar / Jeda Musik 🎵</button>
+    </div>
+
+    <img src="foto.jpg" alt="Foto Kamu">
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <script>
+    function openLetter() {
+      document.querySelector('.envelope').style.display = 'none';
+      document.getElementById('letterMessage').style.display = 'flex';
+      document.getElementById('bgMusic').play();
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById('bgMusic');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
